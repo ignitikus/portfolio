@@ -39,7 +39,7 @@ const projectsArr = [
       login: "",
       password: "",
     },
-    link: "https://nikokim.com/",
+    link: "https://itsy-bitsy-piano.nikokim.com/",
     github:
       "https://github.com/ignitikus/personal-project-CodeImmersives-Term3",
   },
