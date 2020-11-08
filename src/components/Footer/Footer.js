@@ -1,10 +1,9 @@
 import React from "react";
 
 export default function Footer({ mode }) {
-  console.log(new Date().getFullYear());
   const projectsFooter = {
     width: "100%",
-    height: "50px",
+    height: "60px",
     position: "absolute",
     bottom: `${window.innerHeight * 3 * -1 - 50}px`,
     backgroundColor: mode ? "black" : "#eee",
@@ -14,9 +13,16 @@ export default function Footer({ mode }) {
     alignItems: "center",
     justifyContent: "center",
   };
+
+  const endMessage = {
+    position: "absolute",
+    bottom: 0,
+    right: "20px",
+  };
   return (
     <div style={projectsFooter}>
-      <div>Nikolay Kim © {new Date().getFullYear()}</div>
+      <h3>Nikolay Kim © {new Date().getFullYear()}</h3>
+      <h3 style={endMessage}>Thanks for visiting!</h3>
     </div>
   );
 }

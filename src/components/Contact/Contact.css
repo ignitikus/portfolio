@@ -1,0 +1,20 @@
+.innerContactContainer {
+  width: 100%;
+}
+.email-composer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1-header {
+  text-align: center;
+}
+.submit-button-link:hover {
+  transform: scale(0.85);
+}
+
+.quick-links {
+  margin-top: 50px;
+}

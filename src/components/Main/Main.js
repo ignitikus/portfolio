@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Typist from "react-typist";
 import "../../../node_modules/react-typist/dist/Typist.css";
 import "./Main.css";

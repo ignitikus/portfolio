@@ -1,0 +1,64 @@
+.innerAboutContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.skills-h3 {
+  text-align: center;
+}
+
+.about-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.photo-description-container {
+  display: flex;
+  justify-content: center;
+}
+
+.headshot {
+  width: 15vw;
+  border-radius: 15px;
+}
+
+.about-me {
+  width: 50%;
+  font-size: 1.4em;
+  text-align: justify;
+  padding: 10px;
+}
+.about-me-p {
+  text-indent: 2em;
+}
+.h2-under-picture {
+  text-align: center;
+}
+
+.resume-a-link:link,
+.resume-a-link:visited {
+  text-decoration: none;
+  cursor: pointer;
+  color: orange;
+}
+
+@media (max-width: 400px) {
+  .about-me {
+    width: 100%;
+    font-size: 1em;
+  }
+  .innerAboutContainer {
+    margin-top: 200px;
+  }
+}

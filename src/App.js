@@ -14,8 +14,8 @@ function App() {
     <div>
       <Mode setMode={setMode} mode={mode} />
       <Main mode={mode} />
-      <About mode={mode} />
       <Projects mode={mode} />
+      <About mode={mode} />
       <Contact mode={mode} />
       <Footer mode={mode} />
     </div>
