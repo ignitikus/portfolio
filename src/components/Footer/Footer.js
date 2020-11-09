@@ -22,7 +22,9 @@ export default function Footer({ mode }) {
   return (
     <div style={projectsFooter}>
       <h3>Nikolay Kim © {new Date().getFullYear()}</h3>
-      <h3 style={endMessage}>Thanks for visiting!</h3>
+      {window.innerWidth > 600 ? (
+        <h3 style={endMessage}>Thanks for visiting!</h3>
+      ) : null}
     </div>
   );
 }

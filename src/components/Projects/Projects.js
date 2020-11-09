@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[5],
     outline: "none",
     width: window.innerWidth <= 800 ? "90%" : "40%",
-    maxHeight: "80%",
+    maxHeight: "90%",
     borderRadius: "5px",
   },
 }));

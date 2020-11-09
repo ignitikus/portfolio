@@ -116,7 +116,7 @@ export default function About({ mode }) {
         <h1>About Me</h1>
         <div className="about-description">
           <div className="photo-description-container">
-            <div>
+            <div className="photo-and-greeting">
               <img src={headshot} alt="my headshot" className="headshot" />
               <h2 className="h2-under-picture">Hey! It's me!</h2>
             </div>
@@ -128,7 +128,7 @@ export default function About({ mode }) {
                 settings to deliver successful product. Not afraid of challenge
                 or new tech.
               </div>
-              <h4>
+              <div className="resume-header">
                 Checkout my resume:{" "}
                 <a
                   href="https://ignitikus.github.io/resume/"
@@ -138,40 +138,42 @@ export default function About({ mode }) {
                 >
                   click here to open in new tab
                 </a>
-              </h4>
+              </div>
             </div>
           </div>
         </div>
-        <div className="skills-container">
-          <div>
-            <h3 className="skills-h3">What I Know:</h3>
-            {skillsLearned
-              .sort((a, b) => b.percent - a.percent)
-              .map(({ skill, percent }) => {
-                return (
-                  <div key={skill} style={skillDiv}>
-                    <div style={progressDiv}>{skill}</div>
-                    <div>{percentBar(percent)}</div>
-                    <div style={percentNum}>{percent}%</div>
-                  </div>
-                );
-              })}
+        {window.innerWidth > 600 ? (
+          <div className="skills-container">
+            <div>
+              <h3 className="skills-h3">What I Know:</h3>
+              {skillsLearned
+                .sort((a, b) => b.percent - a.percent)
+                .map(({ skill, percent }) => {
+                  return (
+                    <div key={skill} style={skillDiv}>
+                      <div style={progressDiv}>{skill}</div>
+                      <div>{percentBar(percent)}</div>
+                      <div style={percentNum}>{percent}%</div>
+                    </div>
+                  );
+                })}
+            </div>
+            <div>
+              <h3 className="skills-h3">What I'm learning:</h3>
+              {skillsLearning
+                .sort((a, b) => b.percent - a.percent)
+                .map(({ skill, percent }) => {
+                  return (
+                    <div key={skill} style={skillDiv}>
+                      <div style={progressDiv}>{skill}</div>
+                      <div>{percentBar(percent)}</div>
+                      <div style={percentNum}>{percent}%</div>
+                    </div>
+                  );
+                })}
+            </div>
           </div>
-          <div>
-            <h3 className="skills-h3">What I'm learning:</h3>
-            {skillsLearning
-              .sort((a, b) => b.percent - a.percent)
-              .map(({ skill, percent }) => {
-                return (
-                  <div key={skill} style={skillDiv}>
-                    <div style={progressDiv}>{skill}</div>
-                    <div>{percentBar(percent)}</div>
-                    <div style={percentNum}>{percent}%</div>
-                  </div>
-                );
-              })}
-          </div>
-        </div>
+        ) : null}
       </div>
     </div>
   );

@@ -38,9 +38,17 @@
   font-size: 1.4em;
   text-align: justify;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .about-me-p {
   text-indent: 2em;
+}
+
+.resume-header {
+  margin: 10px;
 }
 .h2-under-picture {
   text-align: center;
@@ -53,12 +61,33 @@
   color: orange;
 }
 
-@media (max-width: 400px) {
+.photo-and-greeting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .innerAboutContainer {
+    width: 90%;
+  }
   .about-me {
     width: 100%;
-    font-size: 1em;
+    font-size: 1.4em;
+    padding: 0;
   }
-  .innerAboutContainer {
-    margin-top: 200px;
+  .about-me-p {
+    text-indent: 1em;
+  }
+  .headshot {
+    width: 50%;
+  }
+  .resume-header {
+    padding: 0;
+    margin: 10px 0;
+  }
+  .photo-description-container {
+    flex-direction: column;
   }
 }

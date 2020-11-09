@@ -20,7 +20,7 @@ export default function Contact({ mode }) {
   };
 
   const inputSubject = {
-    width: "30%",
+    width: window.innerWidth > 600 ? "30%" : "80%",
     height: "40px",
     borderRadius: "5px",
     border: "none",
@@ -33,7 +33,7 @@ export default function Contact({ mode }) {
   };
 
   const emailTextArea = {
-    width: "30%",
+    width: window.innerWidth > 600 ? "30%" : "80%",
     borderRadius: "5px",
     border: "none",
     margin: "10px",

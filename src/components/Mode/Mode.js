@@ -80,7 +80,6 @@ export default function Mode({ mode, setMode }) {
       });
     }
   };
-
   return (
     <>
       <div style={iconStyle} onClick={() => setMode(!mode)}>
@@ -91,27 +90,31 @@ export default function Mode({ mode, setMode }) {
         )}
       </div>
       <div style={backgroundPicture} className="backgroundPicture">
-        {mode ? (
-          <WbSunnyIcon style={iconBackgroundStyle} />
-        ) : (
-          <Brightness3Icon style={iconBackgroundStyle} />
-        )}
+        {window.innerWidth > 600 ? (
+          mode ? (
+            <WbSunnyIcon style={iconBackgroundStyle} />
+          ) : (
+            <Brightness3Icon style={iconBackgroundStyle} />
+          )
+        ) : null}
       </div>
-      <div style={arrowContainer}>
-        {currentHeight <= window.innerHeight * 3 ? (
-          <ArrowDownwardIcon
-            style={arrowStyle}
-            className="buttonOnHover"
-            onClick={handleScrollToBottom}
-          />
-        ) : (
-          <ArrowUpwardIcon
-            style={arrowStyle}
-            className="buttonOnHover"
-            onClick={handleScrollToTop}
-          />
-        )}
-      </div>
+      {window.innerWidth > 600 ? (
+        <div style={arrowContainer}>
+          {currentHeight <= window.innerHeight * 3 ? (
+            <ArrowDownwardIcon
+              style={arrowStyle}
+              className="buttonOnHover"
+              onClick={handleScrollToBottom}
+            />
+          ) : (
+            <ArrowUpwardIcon
+              style={arrowStyle}
+              className="buttonOnHover"
+              onClick={handleScrollToTop}
+            />
+          )}
+        </div>
+      ) : null}
     </>
   );
 }

@@ -19,19 +19,24 @@ export default function Main({ mode }) {
     alignItems: "center",
   };
 
+  const typistText = {
+    fontSize: window.innerWidth > 600 ? "3em" : "1.5em",
+    fontWeight: 500,
+  };
+
   return (
     <div style={typistContainer}>
       <div style={typistInnerDiv}>
         <Typist cursor={{ hideWhenDone: true }}>
-          <span className="typist-text">
+          <span style={typistText}>
             Hi! I am <span id="name">Nikolay Kim</span>
           </span>
           <br />
-          <span className="typist-text">
+          <span style={typistText}>
             You can call me <span id="nickname">Niko</span>
           </span>
           <br />
-          <span className="typist-text"> A Full Stack Web Developer</span>
+          <span style={typistText}> A Full Stack Web Developer</span>
         </Typist>
       </div>
     </div>
