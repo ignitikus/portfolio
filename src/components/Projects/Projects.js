@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import fuber from "../../assets/fuber.png";
 import piano from "../../assets/piano.png";
+import ticTacToe from "../../assets/tic-tac-toe.png";
 
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
@@ -56,6 +57,19 @@ const projectsArr = [
     },
     link: "https://fuber-fullstack.herokuapp.com/",
     github: "https://github.com/spaik11/fuber-fullstack",
+  },
+  {
+    title: "Tic-Tac-Toe",
+    description: "Tic-Tac-Toe game with silly opponent.",
+    short: "HTML, CSS, and JavaScript",
+    source: ticTacToe,
+    alt: "game project screenshot",
+    test: {
+      login: "",
+      password: "",
+    },
+    link: "https://ignitikus.github.io/tic-tac-toe/index.html",
+    github: "https://github.com/ignitikus/tic-tac-toe/",
   },
 ];
 
