@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import fuber from "../../assets/fuber.png";
 import piano from "../../assets/piano.png";
+import kanban from "../../assets/kanban.png";
 import ticTacToe from "../../assets/tic-tac-toe.png";
 
 import Backdrop from "@material-ui/core/Backdrop";
@@ -70,6 +71,19 @@ const projectsArr = [
     },
     link: "https://ignitikus.github.io/tic-tac-toe/index.html",
     github: "https://github.com/ignitikus/tic-tac-toe/",
+  },
+  {
+    title: "KANBAN",
+    description: "Simple Kanban board with drag-and-drop functionality.",
+    short: "ReactJS, Redux, Styled-components, React-beautiful-dnd",
+    source: kanban,
+    alt: "kanban project screenshot",
+    test: {
+      login: "",
+      password: "",
+    },
+    link: "http://niko-kanban.surge.sh/",
+    github: "https://github.com/ignitikus/kanban_front",
   },
 ];
 
