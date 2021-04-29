@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Main from "./components/Main/Main";
 import Mode from "./components/Mode/Mode";
 import About from "./components/About/About";
@@ -9,6 +9,15 @@ import "./App.css";
 
 function App() {
   const [mode, setMode] = useState(true);
+
+  useEffect(() => {
+    const now = new Date();
+    if (now.getHours() >= 17 || now.getHours() <= 6) {
+      setMode(false);
+    } else {
+      setMode(true);
+    }
+  }, []);
 
   return (
     <div>
